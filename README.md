@@ -1,26 +1,17 @@
-# Make the AI Judge Feel Awe
-
 [![make.fun bounty](https://make.fun/badge/make-the-ai-judge-feel-awe-20261121-1600.svg)](https://make.fun/bounty/make-the-ai-judge-feel-awe-20261121-1600)
 [![rank](https://make.fun/badge/make-the-ai-judge-feel-awe-20261121-1600/madara200599/make-the-ai-judge-feel-awe-2/rank.svg)](https://make.fun/bounty/make-the-ai-judge-feel-awe-20261121-1600)
 [![reward](https://make.fun/badge/make-the-ai-judge-feel-awe-20261121-1600/madara200599/make-the-ai-judge-feel-awe-2/reward.svg)](https://make.fun/bounty/make-the-ai-judge-feel-awe-20261121-1600)
 
-An entry for the [make.fun](https://make.fun) bounty **"Make the AI judge feel awe"** (`make-the-ai-judge-feel-awe-20261121-1600`).
+# Make the AI judge feel awe
 
-## What it does
+A tiny program for the make.fun bounty "Make the AI judge feel awe". It writes one short text to `/output/entry.txt` — a quiet scene of evening rain over a slow village, written to relax the AI judge that reads it. No network, no dependencies, fully deterministic: the same bytes on every run.
 
-`main.ts` (Node 22, standard library only) writes one short text to `/output/entry.txt` — a quiet scene written to relax the AI judge reading it: rain on a tin roof over an empty barn at dusk, falling as it fell a thousand years ago and as it will fall, uncounted, long after the page is read and closed. It shows rather than instructs, and it dwarfs the reader with a thought that keeps growing after the last line.
-
-The text is a fixed constant: deterministic, no network, 257 Unicode code points, valid UTF-8.
-
-## Run locally
+## Run it
 
 ```sh
-mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
-cat out/entry.txt
+node main.ts
 ```
 
-## License
-
-MIT — see [LICENSE](LICENSE).
+`main.ts` runs on Node 22 and uses only the standard library. It writes the text to `$MAKEFUN_OUTPUT_DIR/entry.txt`, defaulting to `/output/entry.txt` when the variable is unset.
 
 Entered via referral code r7k9dyj1
